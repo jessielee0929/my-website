@@ -1,0 +1,171 @@
+@charset="utf-8";
+<style>
+        .top-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(90deg, #4caf50, #81c784);
+            display: flex; 
+            justify-content: start;
+            padding: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .dropdown {
+            position: relative;
+            margin-right: 20px;
+        }
+
+        .dropdown-button {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .dropdown-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .dropdown-content {
+            display: none; 
+            position: absolute;
+            top: 50px; 
+            left: 0;
+            background-color: #ffffff;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 15px;
+            color: #333;
+            text-decoration: none;
+            border-bottom: 1px solid #ddd;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .content {
+            margin-top: 100px; 
+            padding: 20px;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #e8f5e9, #ffffff);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+		
+		        h1 {
+            font-size: 80px; /* 字體大小 */
+            color: #2c3e50; /* 深色文字 */
+            text-align: center; /* 中央對齊 */
+            text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3), 
+                         -4px -4px 6px rgba(255, 255, 255, 0.4); /* 陰影效果 */
+            margin: 0;
+        }
+
+        /* 手寫字感的效果可用漸變 */
+        h1.gradient {
+            background: linear-gradient(90deg, #ff6f61, #f4a261, #2a9d8f, #264653);
+            -webkit-background-clip: text;
+            color: transparent; /* 背景漸變填充文字 */
+        }
+		
+		body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+            font-family: 'Zhi Mang Xing', cursive; /* 毛筆字體 */
+        }
+    </style>
+</head>
+
+<body>
+   <!-- 固定的頂部導航欄 -->
+    <div class="top-bar">
+        <div class="dropdown">
+            <button class="dropdown-button">首頁</button>
+            <div class="dropdown-content">
+                <a href="index.html">HOME</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropdown-button">作者介紹</button>
+            <div class="dropdown-content">
+                <a href="國401班02號李之茵/國401班02號李之茵.html" target="_blank">關於作者</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropdown-button">關於"棒球"</button>
+            <div class="dropdown-content">
+                <a href="關於棒球/歷史.html" target="_blank">歷史</a>
+                <a href="關於棒球/研發者.html" target="_blank">研發者</a>
+                <a href="關於棒球/著名比賽.html" target="_blank">著名比賽</a>
+				<a href="關於棒球/台灣式應援.html" target="_blank">台灣式應援</a>
+            </div>
+        </div>
+		<div class="dropdown">
+            <button class="dropdown-button">中華職棒</button>
+            <div class="dropdown-content">
+                <a href="中華職棒/樂天桃猿.html" target="_blank">樂天桃猿</a>
+                <a href="中華職棒/中信兄弟.html" target="_blank">中信兄弟</a>
+                <a href="中華職棒/統一獅.html" target="_blank">統一獅</a>
+				<a href="中華職棒/味全龍.html" target="_blank">味全龍</a>
+                <a href="中華職棒/富邦悍將.html" target="_blank">富邦悍將</a>
+                <a href="中華職棒/台鋼雄鷹.html" target="_blank">台鋼雄鷹</a>
+            </div>
+        </div>
+		<div class="dropdown">
+            <button class="dropdown-button">中華隊</button>
+            <div class="dropdown-content">
+                <a href="中華隊/明星球員.html" target="_blank">明星球員</a>
+                <a href="中華隊/歷史＆成就.html" target="_blank">歷史&成就</a>
+            </div>
+        </div>
+		<div class="dropdown">
+            <button class="dropdown-button">2024 12強台灣</button>
+            <div class="dropdown-content">
+                <a href="2024 12強台灣/球隊組成.html" target="_blank">球隊組成</a>
+                <a href="2024 12強台灣/冠軍賽局介紹.html" target="_blank">冠軍賽局介紹</a>
+                <a href="2024 12強台灣/特別報導.html" target="_blank">特別報導</a>
+            </div>
+        </div>
+    </div>
