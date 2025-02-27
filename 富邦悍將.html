@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(to bottom, #00BFFF, #AEEEEE, #FFFFFF); /* 藍色到淡藍色再到白色的漸層 */
+            display: flex;
+            flex-direction: column; /* 垂直排列內容 */
+            align-items: center;
+            justify-content: center;
+            color: #7744FF; /* 字體顏色 */
+            font-family: 'Arial', sans-serif;
+            text-align: center; /* 文字居中 */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* 文字陰影增加可讀性 */
+        }
+        h1 {
+            font-size: 4em; /* 調整標題大小 */
+            margin: 0 0 20px; /* 添加下邊距 */
+            color: white; /* 白色字體 */
+            background-color: rgba(0, 0, 0, 0.7); /* 黑色背景透明 */
+            padding: 10px 20px; /* 添加內邊距 */
+            border: 2px solid white; /* 白色邊框 */
+            display: inline-block; /* 使邊框僅包住內容 */
+            border-radius: 10px; /* 圓角 */
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.9); /* 調整透明度為0.9 */
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); /* 增加陰影 */
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s; /* 添加過渡效果 */
+        }
+        .container:hover {
+            transform: scale(1.02); /* 滑鼠懸停時放大 */
+        }
+        .image {
+            flex: 1;
+            min-width: 200px;
+            max-height: 400px;
+        }
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px 0 0 10px; /* 圖片邊角圓滑 */
+        }
+        .description {
+            flex: 2;
+            padding: 20px;
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+        }
+        h2 {
+            margin-top: 0;
+            color: #0078d7;
+            border-bottom: 2px solid #0078d7; /* 添加下邊框 */
+            padding-bottom: 5px; /* 下邊距 */
+            font-size: 1.8em; /* 標題大小 */
+        }
+        p + p {
+            margin-top: 20px; /* 段落之間的距離 */
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .image {
+                max-height: none;
+                border-radius: 10px; /* 圖片邊角圓滑 */
+            }
+        }
+        /* 按鈕樣式 */
+        .button-container {
+            margin: 20px;
+        }
+        .button {
+            background: linear-gradient(to bottom, #00BFFF, #AEEEEE, #FFFFFF); /* 藍色到淡藍色再到白色的漸層 */
+            color: white; /* 白色字體 */
+            border: none; /* 無邊框 */
+            padding: 15px 30px; /* 內邊距 */
+            margin: 10px; /* 按鈕之間的間距 */
+            border-radius: 5px; /* 圓角 */
+            font-size: 16px; /* 字體大小 */
+            cursor: pointer; /* 滑鼠懸停時變為手指 */
+            transition: background-color 0.3s, transform 0.3s; /* 過渡效果 */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 按鈕陰影 */
+        }
+        .button:hover {
+            transform: translateY(-2px); /* 鼠標懸停時輕微上升 */
+            opacity: 0.9; /* 滑鼠懸停時透明度變化 */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1><富邦悍將></h1>
+    </div>
+
+    <!-- 新增的「球隊成就」區塊 -->
+    <div class="container">
+        <div class="description">
+            <h2>球隊成就</h2>
+            <p>☆ 包括其前身，共拿下七次季冠軍、一次單一球季冠軍及三次總冠軍。</p>
+        </div>
+    </div>
+
+    <!-- 調整後的「味全龍簡介」區塊 -->
+    <div class="container">
+        <div class="image">
+            <img src="https://upload.wikimedia.org/wikipedia/zh/thumb/f/f9/Fubon_Guardians_logo.svg/1200px-Fubon_Guardians_logo.svg.png" alt="富邦悍將標誌">
+        </div>
+        <div class="description">
+            <h2>富邦悍將簡介</h2>
+            <p>
+                富邦悍將是台灣的職業棒球隊，隸屬於中華職棒。主場為新北市立新莊棒球場。
+            </p>
+            <p>
+                其啦啦隊為富邦育樂旗下之Fubon Angels。富邦金控成為臺灣目前同時擁有職業棒球隊以及職業籃球隊（臺北富邦勇士）之企業。
+            </p>
+        </div>
+    </div>
+
+        <div>
+        <a class="button" href="明星球員/5富.html" target="_blank">明星球員</a>
+        <a class="button" href="啦啦隊/富.html" target="_blank">啦啦隊</a>
+    </div>
+</body>
+</html>
